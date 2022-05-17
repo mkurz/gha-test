@@ -1,0 +1,23 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+      - 2.8.x
+    tags:
+      - '**'           # does NOT trigger when release author is github-actions
+  release:
+    types:
+      - published      # DOES trigger even when release author is github-actions
+
+jobs:
+  publish-artifacts:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: releasing
+        run: |
+          echo ${{ github.event_name }}
+          echo ${{ github.event.ref_type }}
+          echo ${{ github.ref }}
