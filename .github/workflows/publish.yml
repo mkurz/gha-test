@@ -7,9 +7,9 @@ on:
       - 2.8.x
 #    tags:
 #      - '**'           # does NOT trigger when release author is github-actions
-  release:
-    types:
-      - published      # DOES trigger even when release author is github-actions
+#  release:
+#    types:
+#      - published      # DOES trigger even when release author is github-actions
 
 jobs:
   publish-artifacts:
