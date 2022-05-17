@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - 2.8.x
+      - '**.**.**'
 #    tags:
 #      - '**'           # does NOT trigger when release author is github-actions
 #  release:
